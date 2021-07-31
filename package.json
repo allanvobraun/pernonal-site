@@ -1,7 +1,10 @@
 {
     "private": true,
-    "workspaces": ["frontend", "backend"],
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
     "scripts": {
         "svelte-dev": "yarn --cwd ./frontend start"
     }
-  }
+}
