@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SanduicheIcon from '../../static/sanduiche.svg';
-	import CloseIcon from '../../static/x.svg';
+	import SanduicheIcon from '$static/sanduiche.svg';
+	import CloseIcon from '$static/x.svg';
 	import { slide } from 'svelte/transition';
 
 	interface MenuItem {
@@ -11,8 +11,8 @@
 	//   const items = [];
 	const items: MenuItem[] = [
 		{
-			name: 'Dashboard',
-			ref: '#',
+			name: 'Home',
+			ref: '#home',
 		},
 		{
 			name: 'Team',

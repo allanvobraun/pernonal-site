@@ -5,7 +5,7 @@ const config = {
 		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
-			dark: '#181818',
+			dark: '#121212',
 			grey1: '#353436',
 			grey2: '#212121',
 			darkGrey: '#262626',

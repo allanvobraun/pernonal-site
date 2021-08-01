@@ -1,10 +1,9 @@
 import preprocess from 'svelte-preprocess';
+import { resolve } from "path";
 
 import svg from '@poppanator/sveltekit-svg';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
 	preprocess: [
 		preprocess({
 			postcss: true,
@@ -16,8 +15,15 @@ const config = {
 		target: '#svelte',
 		vite: {
 			plugins: [svg()],
+			resolve: {
+				alias: {
+					$components: resolve('./src/components'),
+					$static: resolve('./static'),
+				}
+			}
 		},
-	},
+	}
+		
 };
 
 export default config;

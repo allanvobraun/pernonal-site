@@ -1,12 +1,12 @@
 <script>
 	import '../app.css';
-	import NavBar from '../components/NavBar.svelte';
+	import NavBar from '$components/NavBar.svelte';
 </script>
 
 <header class="sticky top-0 z-50">
 	<NavBar />
 </header>
-<main class="relative">
+<main class="relativ">
 	<slot />
 </main>
 <style>

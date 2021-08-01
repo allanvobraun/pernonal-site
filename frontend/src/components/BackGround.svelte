@@ -1,5 +1,5 @@
 <script>
-	import { renderMd } from '../helper';
+	import { renderMd } from '$lib/helper';
 
 	const obj = {
 		'name': 'Allan',
