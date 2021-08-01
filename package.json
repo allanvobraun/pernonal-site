@@ -1,10 +1,11 @@
 {
     "private": true,
+    "license": "MIT",
     "workspaces": [
         "frontend",
         "backend"
     ],
     "scripts": {
-        "svelte-dev": "yarn --cwd ./frontend start"
+        "front-dev": "yarn workspace frontend dev"
     }
 }
