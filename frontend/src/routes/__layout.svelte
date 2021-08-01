@@ -11,6 +11,6 @@
 </main>
 <style>
     main {
-        height: 800px;
+        height: 1200px;
     }
 </style>

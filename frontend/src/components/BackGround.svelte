@@ -1,25 +1,40 @@
-<div class="started-bg">
-	<div class="slide" style="" />
+<script>
+	import { renderMd } from '../helper';
+
+	const obj = {
+		'name': 'Allan',
+		'type': 'Humanoid',
+		'occupation': 'Full Stack Developer'
+	};
+
+	const jsonStr = JSON.stringify(obj, null, 2);
+	
+	const mdString = `\`\`\`json\n${jsonStr}\n \`\`\``;
+	const renderedMd = renderMd(mdString);
+</script>
+
+<div class="bg-fixed started-bg flex items-center justify-center flex-col">
+	<div class="-mt-16 mx-3 flex flex-col justify-center items-center space-y-2">
+		<div class="bg-grey2 border-4 rounded-full h-52 w-52 flex items-center justify-center">
+			<img src="http://zoyothemes.com/queue/layout/images/pal.png" alt="Minha foto" />
+		</div>
+		<h1 class="tracking-tight text-center font-fira font-semibold">Hello word!</h1>
+		<span class="front-code">{@html renderedMd}</span>
+	</div>
 </div>
 
 <style>
+	:global(.front-code>pre) {
+		@apply text-sm lg:text-base;
+	}
+
 	.started-bg {
-        background-image: url(/gato1.png);
+		background-image: url(/gato1.png);
 		background-position: top;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
 		color: #fff;
 		min-height: 700px;
 		z-index: -1;
 	}
-
-	/* .started-bg .slide {
-		width: 100%;
-		height: 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		opacity: 0.9;
-	} */
 </style>

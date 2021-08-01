@@ -11,7 +11,12 @@ const config = {
 			darkGrey: '#262626',
 			white: '#FFFF',
 			boneWhite: '#fbf8ee',
-			purplishWhite: '#EDE9FE'
+			purplishWhite: '#EDE9FE',
+		},
+		extend: {
+			fontFamily: {
+				fira: ['Fira Code'],
+			},
 		},
 	},
 };
