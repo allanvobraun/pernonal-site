@@ -1,7 +1,8 @@
 <script>
-import BackGround from "$components/BackGround.svelte";
-import Card from "$components/Card.svelte";
+	import BackGround from '$components/home/BackGround.svelte';
+	import About from '$components/home/About.svelte';
 </script>
-<div id="home"></div>
-<BackGround></BackGround>
-<!-- <Card></Card> -->
+
+<span id="home" />
+<BackGround />
+<About />

@@ -1,7 +1,9 @@
 import MarkdownIt from 'markdown-it';
 import prism from 'markdown-it-prism';
 import "prismjs/components/prism-json";
-const md = new MarkdownIt();
+const md = new MarkdownIt({
+    html: true
+});
 md.use(prism);
 
 
