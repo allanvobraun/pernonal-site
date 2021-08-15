@@ -20,7 +20,6 @@
 		</div>
 		<h1 class="tracking-tight text-center font-fira font-semibold">Hello word!</h1>
 		<span class="front-code">{@html renderedMd}</span>
-		<noscript>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</noscript>
 	</div>
 </div>
 

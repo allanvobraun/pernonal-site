@@ -1,23 +1,30 @@
 h1 {
-    @apply text-3xl;
+	@apply text-3xl;
 }
 
 h2 {
-    @apply text-2xl;
+	@apply text-2xl;
 }
 
 body {
-    @apply bg-dark;
+	@apply bg-dark;
+}
+
+html,
+body {
+	height: 100%;
 }
 
 html {
-    @apply bg-dark;
-}
-
-.batatinha {
-    background-color: #e3e3e3;
+	background: none;
+    overflow-x: hidden;
+	overscroll-behavior-y: none;
 }
 
 .markdown-body ul {
-    list-style: unset;
+	list-style: unset;
+}
+
+* {
+	scrollbar-width: thin;
 }

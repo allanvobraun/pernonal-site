@@ -8,8 +8,8 @@
 	const renderedMd = renderMd(nada);
 </script>
 
-<div class="my-24">
-	<Card>
+<div class="my-24 h-screen">
+	<Card title="Sobre mim">
 		<div class="markdown-body">
 			{@html renderedMd}
 		</div>
