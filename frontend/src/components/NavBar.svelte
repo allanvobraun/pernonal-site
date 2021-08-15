@@ -28,24 +28,24 @@
 		},
 	];
 
-	let mobileMenu = false;
+	let mobileDropDown = false;
 </script>
 
-<nav class="bg-darkGrey">
-	<div class="max-w-7xl lg:mx-24 2xl:mx-auto">
-		<div class="relative flex items-center justify-between h-16 ">
+<nav class="absolute w-screen bg-grey1 sm:bg-gray-600 sm:bg-opacity-10">
+	<div class="sm:mx-24">
+		<div class="relative flex items-center justify-between h-16">
 			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 				<!-- Mobile menu button-->
 				<button
 					type="button"
-					class="inline-flex items-center justify-center p-2 rounded-md text-boneWhite focus:outline-none focus:ring-2 focus:ring-inset focus:ring-dark"
+					class="inline-flex items-center justify-center p-2 rounded-md text-boneWhite  "
 					aria-controls="mobile-menu"
 					aria-expanded="false"
-					on:click={() => (mobileMenu = !mobileMenu)}
+					on:click={() => (mobileDropDown = !mobileDropDown)}
 				>
 					<span class="sr-only">Open main menu</span>
 					<div class="block h-6 w-6">
-						{#if mobileMenu === true}
+						{#if mobileDropDown === true}
 							<CloseIcon />
 						{:else}
 							<SanduicheIcon />
@@ -74,7 +74,7 @@
 	</div>
 
 	<!-- Mobile menu, show/hide based on menu state. -->
-	{#if mobileMenu === true}
+	{#if mobileDropDown === true}
 		<div class="sm:hidden" id="mobile-menu" transition:slide>
 			<div class="px-2 pt-2 pb-3 space-y-1">
 				{#each items as { name, ref }}
