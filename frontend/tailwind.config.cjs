@@ -5,6 +5,7 @@ const config = {
 		extend: {
 			fontFamily: {
 				fira: ['Fira Code'],
+				sand: ['Quicksand']
 			},
 
 			colors: {

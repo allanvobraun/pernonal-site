@@ -24,9 +24,6 @@
 </div>
 
 <style>
-	:global(.front-code>pre) {
-		@apply text-sm lg:text-base;
-	}
 
 	.started-bg {
 		background-image: url(/gato1.png);

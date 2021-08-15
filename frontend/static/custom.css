@@ -1,9 +1,5 @@
-h1 {
-	@apply text-3xl;
-}
-
-h2 {
-	@apply text-2xl;
+* {
+	scrollbar-width: thin;
 }
 
 body {
@@ -17,14 +13,27 @@ body {
 
 html {
 	background: none;
-    overflow-x: hidden;
+	overflow-x: hidden;
 	overscroll-behavior-y: none;
+}
+
+h1 {
+	@apply text-3xl;
+}
+
+h2 {
+	@apply text-2xl;
 }
 
 .markdown-body ul {
 	list-style: unset;
 }
 
-* {
-	scrollbar-width: thin;
+.heading {
+	@apply font-sand font-semibold uppercase tracking-wider text-4xl text-white text-center 
+        after:content-center after:block after:my-3 after:mx-auto after:w-8 after:h-0.5 after:bg-boneWhite after:opacity-25;
+}
+
+.front-code > pre {
+	@apply text-sm lg:text-base;
 }
