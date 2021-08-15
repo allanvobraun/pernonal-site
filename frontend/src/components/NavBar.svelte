@@ -15,19 +15,15 @@
 			ref: '#home',
 		},
 		{
-			name: 'Team',
+			name: 'Sobre mim',
 			ref: '#',
 		},
 		{
-			name: 'Projects',
+			name: 'Projetos',
 			ref: '#',
 		},
 		{
-			name: 'Calendart',
-			ref: '#',
-		},
-		{
-			name: 'Potato',
+			name: 'Blog',
 			ref: '#',
 		},
 	];

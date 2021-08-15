@@ -1,0 +1,23 @@
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+body {
+    @apply bg-dark;
+}
+
+html {
+    @apply bg-dark;
+}
+
+.batatinha {
+    background-color: #e3e3e3;
+}
+
+.markdown-body ul {
+    list-style: unset;
+}

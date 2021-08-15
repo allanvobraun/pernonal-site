@@ -6,6 +6,8 @@
         "backend"
     ],
     "scripts": {
-        "front-dev": "yarn workspace frontend dev"
+        "front-dev": "yarn workspace frontend run dev",
+        "back-dev": "yarn workspace backend run develop",
+        "dev": "yarn run front-dev & yarn run back-dev"
     }
 }

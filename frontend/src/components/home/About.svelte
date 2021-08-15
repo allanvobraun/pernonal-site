@@ -1,13 +1,18 @@
+
 <script>
 	import Card from '$components/Card.svelte';
-
 	import { renderMd } from '$lib/helper';
-	const txt = "# potato!";
-	const renderedMd = renderMd(txt);
+
+	export let text;
+	const nada = text ?? '# nada';
+	const renderedMd = renderMd(nada);
 </script>
 
-<Card>
-    <div class="markdown-body">
-        {@html renderedMd}
-    </div>
-</Card>
+<div class="my-24">
+	<Card>
+		<div class="markdown-body">
+			{@html renderedMd}
+		</div>
+	</Card>
+	
+</div>

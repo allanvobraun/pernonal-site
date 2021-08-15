@@ -15,8 +15,8 @@
 
 <div class="bg-fixed started-bg flex items-center justify-center flex-col">
 	<div class="-mt-16 mx-3 flex flex-col justify-center items-center space-y-2">
-		<div class="bg-grey2 border-4 rounded-full h-52 w-52 flex items-center justify-center">
-			<img src="http://zoyothemes.com/queue/layout/images/pal.png" alt="Minha foto" />
+		<div class="bg-grey2 border-4 rounded-full h-52 w-52 flex items-center justify-center overflow-hidden">
+			<img src="https://i.pravatar.cc/300" alt="Minha foto" />
 		</div>
 		<h1 class="tracking-tight text-center font-fira font-semibold">Hello word!</h1>
 		<span class="front-code">{@html renderedMd}</span>

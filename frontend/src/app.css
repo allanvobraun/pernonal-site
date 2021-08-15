@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
-@import '../static/prism-hopscotch.css';
-@import 'github-markdown-css/github-markdown.css';
-@import 'github-markdown-dracula-css/github-markdown-dracula.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-	h1 {
-		@apply text-3xl;
-	}
-	h2 {
-		@apply text-2xl;
-	}
-
-	body {
-		@apply bg-dark;
-	}
-}
