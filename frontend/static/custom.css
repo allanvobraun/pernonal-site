@@ -27,6 +27,7 @@ h2 {
 
 .markdown-body ul {
 	list-style: unset;
+	padding-left: 1.2rem;
 }
 
 .heading {

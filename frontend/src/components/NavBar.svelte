@@ -16,7 +16,7 @@
 		},
 		{
 			name: 'Sobre mim',
-			ref: '#',
+			ref: '#about',
 		},
 		{
 			name: 'Projetos',
