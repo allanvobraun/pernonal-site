@@ -2,7 +2,7 @@
 	export let text: string = '';
 </script>
 
-<h1 class="heading my-6">sobre mim</h1>
+<h1 class="heading my-6">{text}</h1>
 
 <style>
 	.heading {
