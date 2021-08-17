@@ -19,5 +19,4 @@
 
 <span id="home" />
 <BackGround />
-<span id="about" />
 <About bind:text />
