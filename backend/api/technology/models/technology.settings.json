@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "stacks",
+  "collectionName": "technologies",
   "info": {
-    "name": "stack"
+    "name": "technology",
+    "description": ""
   },
   "options": {
     "increments": true,

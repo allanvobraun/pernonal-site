@@ -1,9 +1,13 @@
-<script>
+<script lang="ts">
+	import type { Tech } from '$lib/types';
 	import Card from '$components/Card.svelte';
 	import Heading from '$components/Heading.svelte';
 	import { renderMd } from '$lib/helper';
+	import TechStack from './TechStack.svelte';
 
-	export let text;
+	export let text: string;
+	export let technologies: Tech[];
+
 	const renderedMd = renderMd(text);
 </script>
 
@@ -18,4 +22,5 @@
 	</div>
 
 	<Heading text="Tech Stack" />
+	<TechStack {technologies} />
 </div>

@@ -14,6 +14,7 @@ const config = {
 		postcss: {
 			plugins: [tailwindcss(resolve(__dirname, './tailwind.config.cjs')), autoprefixer],
 		},
+		sourceMap: true,
 	}),
 
 	kit: {

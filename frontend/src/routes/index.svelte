@@ -1,22 +1,26 @@
-<script context="module">
+<script context="module" lang="ts">
+	import type { Tech } from '$lib/types';
 
 	export async function load({ fetch }) {
+		const [aboutResponse, techResponse] = await Promise.all([
+			fetch('/api/about'),
+			fetch('/api/technologies'),
+		]);
 
-		const res = await fetch('/api/about');
-		const data = await res.json();
-
-		return { props: { text: data.text } };
+		const about = await aboutResponse.json();
+		const technologies: Tech[] = await techResponse.json();
+		return { props: { aboutText: about.text, technologies: technologies } };
 	}
-
 </script>
 
-<script>
+<script lang="ts">
 	import BackGround from '$components/home/BackGround.svelte';
 	import About from '$components/home/About.svelte';
 
-	export let text;
+	export let aboutText: string;
+	export let technologies: Tech[];
 </script>
 
 <span id="home" />
 <BackGround />
-<About bind:text />
+<About bind:text={aboutText} bind:technologies />

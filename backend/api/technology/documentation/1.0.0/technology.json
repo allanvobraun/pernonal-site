@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/stacks": {
+    "/technologies": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Stack"
+                    "$ref": "#/components/schemas/Technology"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Stack"
+                  "$ref": "#/components/schemas/Technology"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStack"
+                "$ref": "#/components/schemas/NewTechnology"
               }
             }
           }
         }
       }
     },
-    "/stacks/count": {
+    "/technologies/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "parameters": []
       }
     },
-    "/stacks/{id}": {
+    "/technologies/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Stack"
+                  "$ref": "#/components/schemas/Technology"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Stack"
+                  "$ref": "#/components/schemas/Technology"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStack"
+                "$ref": "#/components/schemas/NewTechnology"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Stack"
+          "Technology"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Stack": {
+      "Technology": {
         "required": [
           "id"
         ],
@@ -598,7 +598,7 @@
           }
         }
       },
-      "NewStack": {
+      "NewTechnology": {
         "properties": {
           "name": {
             "type": "string"
@@ -619,7 +619,7 @@
   },
   "tags": [
     {
-      "name": "Stack"
+      "name": "Technology"
     }
   ]
 }

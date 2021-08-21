@@ -5,5 +5,4 @@ export interface Tech {
 
 export interface Image {
 	url: string;
-	[key: string]: any;
 }
