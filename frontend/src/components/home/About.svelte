@@ -13,14 +13,18 @@
 
 <div id="about" class="flex flex-col">
 	<Heading text="Sobre mim" />
-	<div class="my-12 mx-5">
-		<Card>
-			<div class="markdown-body">
-				{@html renderedMd}
-			</div>
-		</Card>
+	<div class="my-5 mx-5 sm:mx-auto">
+		<div id="about-card" class="w-full sm:w-max">
+			<Card>
+				<div class="text-base markdown-body sm:text-lg">
+					{@html renderedMd}
+				</div>
+			</Card>
+		</div>
 	</div>
 
 	<Heading text="Tech Stack" />
-	<TechStack {technologies} />
+	<div class="my-5 mx-5 sm:mx-auto">
+		<TechStack {technologies} />
+	</div>
 </div>

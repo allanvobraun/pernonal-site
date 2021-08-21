@@ -2,7 +2,7 @@
 	export let title: string = null;
 </script>
 
-<div class="card bg-grey1 p-1 rounded-lg max-w-xl md:w-3/4 mx-auto">
+<div class="card bg-grey1 p-1 rounded-lg md:w-3/4 mx-auto">
 	{#if title}
 		<h2 class="text-2xl font-bold mb-2 mt-3 ml-5 text-boneWhite">{title}</h2>
 	{/if}
