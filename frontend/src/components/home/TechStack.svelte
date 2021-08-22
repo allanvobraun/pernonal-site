@@ -4,7 +4,7 @@
 	export let technologies: Tech[];
 </script>
 
-<div id="techstack" class="w-full sm:w-max">
+<div id="techstack" >
 	<div class="grid grid-cols-3 sm:grid-cols-5 gap-10">
 		{#each technologies as tech}
 			<div class="text-center text-white flex flex-col items-center">

@@ -11,20 +11,22 @@
 	const renderedMd = renderMd(text);
 </script>
 
-<div id="about" class="flex flex-col">
-	<Heading text="Sobre mim" />
-	<div class="my-5 mx-5 sm:mx-auto">
-		<div id="about-card" class="w-full sm:w-max">
-			<Card>
-				<div class="text-base markdown-body sm:text-lg">
-					{@html renderedMd}
-				</div>
-			</Card>
+<div id="about">
+	<div class="flex flex-col justify-center items-center mx-auto px-8 sm:max-w-3xl 2xl:max-w-4xl">
+		<Heading text="Sobre mim" />
+		<div class="my-5">
+			<div id="about-card">
+				<Card>
+					<div class="text-base markdown-body sm:text-lg">
+						{@html renderedMd}
+					</div>
+				</Card>
+			</div>
 		</div>
-	</div>
 
-	<Heading text="Tech Stack" />
-	<div class="my-5 mx-5 sm:mx-auto">
-		<TechStack {technologies} />
+		<Heading text="Tech Stack" />
+		<div class="my-5 w-full">
+			<TechStack {technologies} />
+		</div>
 	</div>
 </div>
