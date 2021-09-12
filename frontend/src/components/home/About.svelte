@@ -11,7 +11,7 @@
 	const renderedMd = renderMd(text);
 </script>
 
-<div id="about">
+<section id="about" class="relative">
 	<div class="flex flex-col justify-center items-center mx-auto px-8 sm:max-w-3xl 2xl:max-w-4xl">
 		<Heading text="Sobre mim" />
 		<div class="my-5">
@@ -29,4 +29,4 @@
 			<TechStack {technologies} />
 		</div>
 	</div>
-</div>
+</section>

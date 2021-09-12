@@ -16,6 +16,7 @@
 <script lang="ts">
 	import BackGround from '$components/home/BackGround.svelte';
 	import About from '$components/home/About.svelte';
+	import Projects from '$components/home/Projects.svelte';
 
 	export let aboutText: string;
 	export let technologies: Tech[];
@@ -24,3 +25,4 @@
 <span id="home" />
 <BackGround />
 <About bind:text={aboutText} bind:technologies />
+<Projects />

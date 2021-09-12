@@ -1,12 +1,13 @@
 const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
+	purge: ['./src/**/*.{html,svelte}'],
 	important: true,
 	theme: {
 		extend: {
 			fontFamily: {
 				fira: ['Fira Code'],
-				sand: ['Quicksand']
+				sand: ['Quicksand'],
+				glory: ['Glory'],
 			},
 
 			colors: {

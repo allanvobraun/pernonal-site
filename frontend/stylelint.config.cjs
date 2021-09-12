@@ -1,6 +1,8 @@
 module.exports = {
     extends: ["stylelint-config-standard"],
     rules: {
+      "indentation": null,
+      "no-eol-whitespace": null,
       "at-rule-no-unknown": [
         true,
         {
@@ -10,6 +12,7 @@ module.exports = {
             "variants",
             "responsive",
             "screen",
+            "layer"
           ],
         },
       ],
