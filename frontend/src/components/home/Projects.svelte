@@ -12,10 +12,6 @@
 				Projetos que eu faço no meu tempo livre, com o objetivo de aprender algo novo ou prototipar uma ideia.
 			</p>
 		</div>
-		<div class="flex flex-col justify-center items-center mx-auto px-8 sm:max-w-3xl 2xl:max-w-4xl">
-			<h1>Projeto 1 2 3</h1>
-			<h1>Projeto 1 2 3</h1>
-			<h1>Projeto 1 2 3</h1>
-		</div>
+		<h1> WIP: WORK IN PROGRESS </h1>
 	</div>
 </section>

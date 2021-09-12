@@ -8,7 +8,6 @@
 		ref: string;
 	}
 
-	//   const items = [];
 	const items: MenuItem[] = [
 		{
 			name: 'Home',
@@ -20,7 +19,7 @@
 		},
 		{
 			name: 'Projetos',
-			ref: '#',
+			ref: '#projects',
 		},
 		{
 			name: 'Blog',
