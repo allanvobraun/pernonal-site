@@ -31,14 +31,14 @@
 	let mobileDropDown = false;
 </script>
 
-<nav class="absolute w-screen bg-grey1 sm:bg-gray-600 sm:bg-opacity-10">
+<nav class="absolute w-screen bg-grey1 shadow-lg  sm:bg-gray-600 sm:bg-opacity-10" >
 	<div class="sm:mx-24">
 		<div class="relative flex items-center justify-between h-16">
 			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 				<!-- Mobile menu button-->
 				<button
 					type="button"
-					class="inline-flex items-center justify-center p-2 rounded-md text-boneWhite  "
+					class="inline-flex items-center justify-center p-2 rounded-md text-boneWhite"
 					aria-controls="mobile-menu"
 					aria-expanded="false"
 					on:click={() => (mobileDropDown = !mobileDropDown)}
@@ -78,7 +78,7 @@
 		<div class="sm:hidden" id="mobile-menu" transition:slide>
 			<div class="px-2 pt-2 pb-3 space-y-1">
 				{#each items as { name, ref }}
-					<a href={ref} class="text-purplishWhite block px-3 py-2 rounded-md text-base font-medium">
+					<a href={ref} class="text-purplishWhite block px-3 py-2 rounded-md text-base font-medium" on:click={() => (mobileDropDown = false)}>
 						{name}
 					</a>
 				{/each}

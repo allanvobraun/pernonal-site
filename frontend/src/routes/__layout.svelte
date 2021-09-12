@@ -7,7 +7,7 @@
 	import NavBar from '$components/NavBar.svelte';
 </script>
 
-<header class="sticky top-0 z-50">
+<header class="fixed top-0 z-50">
 	<NavBar />
 </header>
 <main class="relative">
