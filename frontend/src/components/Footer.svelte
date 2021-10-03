@@ -41,12 +41,12 @@
 		<div class="flex flex-col items-center">
 			<a
 				href="https://www.digitalocean.com/?refcode=29309b4d8996&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
+				target="_blank"
+				rel="noopener noreferrer"
 			>
 				<img
 					src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg"
 					alt="DigitalOcean Referral Badge"
-					target="_blank"
-					rel="noopener noreferrer"
 				/>
 			</a>
 		</div>

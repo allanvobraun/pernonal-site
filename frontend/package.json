@@ -36,6 +36,7 @@
 		"typescript": "^4.0.0"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.20",
 		"@types/feather-icons": "^4.7.0",
 		"@types/markdown-it": "^12.0.3",
 		"feather-icons": "^4.28.0",

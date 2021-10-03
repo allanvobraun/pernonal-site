@@ -4,6 +4,8 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import adapter from '@sveltejs/adapter-static';
+
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -29,6 +31,7 @@ const config = {
 				},
 			},
 		},
+		adapter: adapter(),
 	},
 };
 

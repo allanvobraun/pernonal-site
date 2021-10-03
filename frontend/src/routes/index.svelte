@@ -1,4 +1,9 @@
 <script context="module" lang="ts">
+	export const prerender = true;
+	export const router = false;
+	export const hydrate = false;
+
+
 	import type { Tech } from '$lib/types';
 
 	export async function load({ fetch }) {
