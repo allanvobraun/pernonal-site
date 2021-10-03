@@ -20,6 +20,11 @@ const config = {
 				boneWhite: '#fbf8ee',
 				purplishWhite: '#EDE9FE',
 			},
+			maxWidth: {
+				'1/4': '25%',
+				'1/2': '50%',
+				'3/4': '75%',
+			},
 		},
 	},
 };

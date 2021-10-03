@@ -1,14 +1,10 @@
 <script lang="ts">
 	import SanduicheIcon from '$static/sanduiche.svg';
 	import CloseIcon from '$static/x.svg';
+	import type { Link } from '$lib/types';
 	import { slide } from 'svelte/transition';
 
-	interface MenuItem {
-		name: string;
-		ref: string;
-	}
-
-	const items: MenuItem[] = [
+	const items: Link[] = [
 		{
 			name: 'Home',
 			ref: '#home',
@@ -21,16 +17,12 @@
 			name: 'Projetos',
 			ref: '#projects',
 		},
-		{
-			name: 'Blog',
-			ref: '#',
-		},
 	];
 
 	let mobileDropDown = false;
 </script>
 
-<nav class="absolute w-screen bg-grey1 shadow-lg  sm:bg-gray-600 sm:bg-opacity-10" >
+<nav class="absolute w-screen bg-grey1 shadow-lg  sm:bg-gray-600 sm:bg-opacity-10">
 	<div class="sm:mx-24">
 		<div class="relative flex items-center justify-between h-16">
 			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -77,7 +69,11 @@
 		<div class="sm:hidden" id="mobile-menu" transition:slide>
 			<div class="px-2 pt-2 pb-3 space-y-1">
 				{#each items as { name, ref }}
-					<a href={ref} class="text-purplishWhite block px-3 py-2 rounded-md text-base font-medium" on:click={() => (mobileDropDown = false)}>
+					<a
+						href={ref}
+						class="text-purplishWhite block px-3 py-2 rounded-md text-base font-medium"
+						on:click={() => (mobileDropDown = false)}
+					>
 						{name}
 					</a>
 				{/each}
