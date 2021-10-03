@@ -23,8 +23,11 @@
 				</Card>
 			</div>
 		</div>
-
-		<Heading text="Tech Stack" />
+		<h2
+			class="font-sand font-semibold uppercase tracking-wider text-4xl 2xl:text-5xl text-white text-center my-6"
+		>
+			Tech Stack
+		</h2>
 		<div class="my-5 w-full">
 			<TechStack {technologies} />
 		</div>
