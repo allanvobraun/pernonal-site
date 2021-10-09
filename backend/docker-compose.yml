@@ -3,7 +3,7 @@ services:
   strapi:
     image: personal-site-strapi-image:1.0
     container_name: personal-site-strapi-container
-    # restart: always
+    restart: always
     volumes:
       - ${PUBLIC_DIR}:/usr/app/public 
       - ./.tmp:/usr/app/.tmp 
