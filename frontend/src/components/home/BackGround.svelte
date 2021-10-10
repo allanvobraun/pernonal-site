@@ -1,5 +1,5 @@
 <script>
-	import { renderMd } from '$lib/helper';
+	import { renderMd, dynamicImage } from '$lib/helper';
 
 	const obj = {
 		'name': 'Allan',
@@ -16,7 +16,7 @@
 <div class="bg-fixed started-bg flex items-center justify-center flex-col h-screen">
 	<div class="-mt-16 mx-3 flex flex-col justify-center items-center space-y-2">
 		<div class="bg-boneWhite border-4 rounded-full h-52 w-52 flex items-center justify-center overflow-hidden">
-			<img src="https://yt3.ggpht.com/ytc/AKedOLScd3qE7Blu2CtRbzkfBzbEwE3_bIpO-dRaQjTPTg=s900-c-k-c0x00ffffff-no-rj" alt="Minha foto" />
+			<img src={dynamicImage("/uploads/minha_foto_58af301782.jpg")} alt="Minha foto" />
 		</div>
 		<h1 class="tracking-tight text-center font-fira font-semibold">Hello word!</h1>
 		<span class="front-code">{@html renderedMd}</span>

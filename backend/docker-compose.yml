@@ -6,7 +6,6 @@ services:
     restart: always
     volumes:
       - ${PUBLIC_DIR}:/usr/app/public 
-      - ./.tmp:/usr/app/.tmp 
-      - ./config:/usr/app/config
+      - ./.tmp:/usr/app/.tmp
     ports:
       - "1337:1337"
