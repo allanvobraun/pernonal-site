@@ -46,7 +46,7 @@
 			</div>
 			<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex-shrink-0 flex items-center">
-					<a href="/" class="text-2xl font-black text-white tracking-wide ">Allan Braun</a>
+					<a href="/" class="text-2xl font-fira font-black text-white tracking-wide ">Allan Braun</a>
 				</div>
 				<div class="hidden sm:block sm:ml-6 lg:flex lg:flex-row lg:flex-grow">
 					<div class="flex space-x-4 lg:ml-auto">
