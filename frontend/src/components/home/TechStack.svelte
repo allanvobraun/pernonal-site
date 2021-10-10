@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Tech } from '$lib/types';
-	import env from '$lib/env';
 	import { dynamicImage } from '$lib/helper';
 	export let technologies: Tech[];
 </script>
