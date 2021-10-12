@@ -13,7 +13,7 @@ ENV NODE_ENV=production
 
 RUN yarn build
 
-RUN npm prune --production
+RUN yarn prune --production
 
 FROM node:14-alpine
 
