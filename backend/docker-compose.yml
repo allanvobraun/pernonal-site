@@ -1,9 +1,9 @@
 version: "3.9"
 services:
   strapi:
-    image: personal-site-strapi-image:1.0
+    image: personal-site-strapi-image:d047cff
     container_name: personal-site-strapi-container
-    restart: always
+    # restart: always
     volumes:
       - ${PUBLIC_DIR}:/usr/app/public 
       - ./.tmp:/usr/app/.tmp
