@@ -1,2 +1,10 @@
 node_modules
 build
+public
+.editorconfig
+.env.example
+.eslintignore
+.eslintrc
+.gitignore
+.strapi-updater.json
+README.md
