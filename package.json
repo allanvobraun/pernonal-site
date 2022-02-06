@@ -1,13 +1,15 @@
 {
-    "private": true,
-    "license": "MIT",
-    "workspaces": [
-        "frontend",
-        "backend"
-    ],
-    "scripts": {
-        "front-dev": "yarn workspace frontend run dev",
-        "back-dev": "yarn workspace backend run develop",
-        "dev": "yarn run front-dev & yarn run back-dev"
-    }
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "front-dev": "yarn workspace frontend run dev",
+    "back-dev": "yarn workspace backend run develop",
+    "dev": "yarn run front-dev & yarn run back-dev"
+  },
+  "devDependencies": {
+    "turbo": "^1.1.2"
+  }
 }
