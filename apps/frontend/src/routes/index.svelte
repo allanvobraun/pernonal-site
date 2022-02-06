@@ -11,8 +11,9 @@
 			fetch('/api/technologies'),
 		]);
 
-		const about = await aboutResponse.json();
-		const technologies: Tech[] = await techResponse.json();
+		const about = (await aboutResponse.json()).data;
+		
+		const technologies: Tech[] = (await techResponse.json()).data;
 		return { props: { aboutText: about.text, technologies: technologies } };
 	}
 </script>

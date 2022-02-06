@@ -3,8 +3,12 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "dev": {
+    "kill": {
       "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "dependsOn": ["kill"]
     }
   }
 }

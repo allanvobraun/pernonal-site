@@ -7,7 +7,8 @@
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "kill": "fuser -k 1337/tcp || true"
   },
   "devDependencies": {},
   "dependencies": {
