@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "personal-site-backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,29 +11,20 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "knex": "0.21.18",
-    "sqlite3": "5.0.0",
-    "strapi": "3.6.5",
-    "strapi-admin": "3.6.5",
-    "strapi-connector-bookshelf": "3.6.5",
-    "strapi-plugin-content-manager": "3.6.5",
-    "strapi-plugin-content-type-builder": "3.6.5",
-    "strapi-plugin-documentation": "3.6.5",
-    "strapi-plugin-email": "3.6.5",
-    "strapi-plugin-i18n": "3.6.5",
-    "strapi-plugin-upload": "3.6.5",
-    "strapi-plugin-users-permissions": "3.6.5",
-    "strapi-utils": "3.6.5"
+    "@strapi/strapi": "4.0.7",
+    "@strapi/plugin-users-permissions": "4.0.7",
+    "@strapi/plugin-i18n": "4.0.7",
+    "sqlite3": "5.0.2"
   },
   "author": {
     "name": "Allan Braun"
   },
   "strapi": {
-    "uuid": "8a48f244-8c84-439c-b56c-10cc20065e02"
+    "uuid": "5026d801-3c1a-4f20-ac29-0fe59b74b954"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }

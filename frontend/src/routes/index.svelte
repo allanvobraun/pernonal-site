@@ -1,7 +1,6 @@
 <script context="module" lang="ts">
-	export const prerender = true;
 	export const router = false;
-	export const hydrate = false;
+	export const hydrate = true;
 
 
 	import type { Tech } from '$lib/types';

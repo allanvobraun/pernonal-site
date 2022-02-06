@@ -4,12 +4,11 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import adapter from '@sveltejs/adapter-static';
-
+import svg from '@poppanator/sveltekit-svg';
+import adapter from '@sveltejs/adapter-node';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-import svg from '@poppanator/sveltekit-svg';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sveltePreprocess({

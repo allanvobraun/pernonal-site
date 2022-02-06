@@ -1,5 +1,7 @@
 FROM node:14-alpine as BUILD_IMAGE
 
+ENV NODE_ENV=production
+
 WORKDIR /usr/app
 COPY ./package.json ./
 
@@ -9,15 +11,12 @@ RUN yarn install --production=true --frozen-lockfile
 
 COPY . .
 
-ENV NODE_ENV=production
-
 RUN yarn build
 
-RUN yarn prune --production
+RUN npm prune --production
 
 FROM node:14-alpine
 
-# Only copy your source code without system file
 COPY --from=BUILD_IMAGE /usr/app /usr/app
 
 WORKDIR /usr/app
