@@ -5,7 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "dev": "strapi develop",
-    "start": "strapi start",
+    "start": "npx strapi start",
     "build": "strapi build",
     "strapi": "strapi",
     "kill": "fuser -k 1337/tcp || true"

@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  backend:
+    image: personal-site-strapi-image:${TAG}
+    container_name: personal-site-strapi-container
+    restart: always
+    volumes:
+      - ./.tmp:/usr/app/.tmp
+    ports:
+      - "1337:1337"
+  frontend:
+      image: personal-site-strapi-image:${TAG}
+      container_name: personal-site-strapi-container
+      restart: always
+      volumes:
+        - ./.tmp:/usr/app/.tmp
+      ports:
+        - "1337:1337"
