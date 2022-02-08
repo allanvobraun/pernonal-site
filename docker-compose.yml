@@ -1,18 +1,22 @@
 version: "3.9"
 services:
   backend:
-    image: personal-site-strapi-image:${TAG}
-    container_name: personal-site-strapi-container
+    build:
+      context: ./apps/backend
+    image: site-backend-strapi-image:latest
+    container_name: site-backend-strapi-container
     restart: always
     volumes:
-      - ./.tmp:/usr/app/.tmp
+      - ./apps/backend/.tmp:/usr/app/.tmp
     ports:
       - "1337:1337"
   frontend:
-      image: personal-site-strapi-image:${TAG}
-      container_name: personal-site-strapi-container
-      restart: always
-      volumes:
-        - ./.tmp:/usr/app/.tmp
-      ports:
-        - "1337:1337"
+    build:
+      context: ./apps/frontend
+    image: site-frontend-strapi-image:latest
+    container_name: site-frontend-strapi-container
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

@@ -1,24 +1,14 @@
-FROM node:14-alpine as BUILD_IMAGE
+FROM node:16-alpine
 
 ENV NODE_ENV=production
 
 WORKDIR /usr/app
-COPY ./package.json ./
+COPY ./package.json .
 
-RUN yarn install
+RUN yarn install --production=true --frozen-lockfile
 
-COPY . .
-
-RUN yarn build
-
-FROM node:14-alpine
-
-COPY --from=BUILD_IMAGE /usr/app /usr/app
-
-WORKDIR /usr/app
+COPY ./build ./build
 
 EXPOSE 3000
 
-ENV NODE_ENV=production
-
-CMD ["node", "./build"]
+CMD ["node", "build"]
