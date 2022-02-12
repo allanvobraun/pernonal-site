@@ -1,0 +1,14 @@
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "kill": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "dependsOn": ["kill"]
+    }
+  }
+}

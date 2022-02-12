@@ -1,0 +1,11 @@
+node_modules
+public
+.turbo
+.tmp
+.editorconfig
+.env.example
+.eslintignore
+.eslintrc
+.gitignore
+.strapi-updater.json
+README.md

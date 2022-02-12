@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./apps/backend
+    image: site-backend-strapi-image:latest
+    container_name: site-backend-strapi-container
+    restart: always
+    volumes:
+      - ./apps/backend/.tmp:/usr/app/.tmp
+    ports:
+      - "1337:1337"
+  frontend:
+    build:
+      context: ./apps/frontend
+    image: site-frontend-strapi-image:latest
+    container_name: site-frontend-strapi-container
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

@@ -1,0 +1,8 @@
+node_modules
+.editorconfig
+.env.example
+.eslintignore
+.eslintrc
+.gitignore
+.svelte-kit
+README.md
