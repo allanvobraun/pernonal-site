@@ -3,20 +3,23 @@ services:
   backend:
     build:
       context: ./apps/backend
-    image: site-backend-strapi-image:latest
-    container_name: site-backend-strapi-container
+    image: public.ecr.aws/t6b6n7l9/personal-site-backend:latest
+    container_name: site-backend-strapi
     restart: always
     volumes:
-      - ./apps/backend/.tmp:/usr/app/.tmp
+      - strapi-sqlite-volume:/usr/app/.tmp
     ports:
       - "1337:1337"
   frontend:
     build:
       context: ./apps/frontend
-    image: site-frontend-strapi-image:latest
-    container_name: site-frontend-strapi-container
+    image: public.ecr.aws/t6b6n7l9/personal-site-frontend:latest
+    container_name: site-frontend-sveltekit
     restart: always
     ports:
       - "3000:3000"
     depends_on:
       - backend
+
+volumes:
+  strapi-sqlite-volume:
