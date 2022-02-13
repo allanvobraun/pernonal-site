@@ -8,6 +8,7 @@
     "start": "npx strapi start",
     "build": "strapi build",
     "strapi": "strapi",
+    "prod": "node server.js",
     "kill": "fuser -k 1337/tcp || true"
   },
   "devDependencies": {},
