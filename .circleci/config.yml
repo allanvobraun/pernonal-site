@@ -33,6 +33,9 @@ jobs:
       - run:
           name: build with turborepo
           command: yarn run build
+      - run:
+          name: cp yarnlock
+          command: echo "apps/backend apps/frontend" | xargs -n 1 cp -v yarn.lock 
       - save_cache:
           name: Save turborepo build cache
           key: turborepo
