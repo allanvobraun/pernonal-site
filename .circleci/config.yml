@@ -4,10 +4,9 @@ executors:
   node:
     docker:
       - image: cimg/node:16.14.0
-    working_directory: /tmp
 orbs:
   aws-cli: circleci/aws-cli@2.0.0
-  
+
 jobs:
   build:
     executor: node
@@ -46,7 +45,6 @@ jobs:
   build-docker:
     description: build and push docker images to public AWS ECR registry
     executor: aws-cli/default
-    working_directory: /tmp
     resource_class: medium
     parameters:
       profile-name:
@@ -107,7 +105,7 @@ jobs:
         description: A comma-separated string containing docker image tags to build and push (default = latest)
     steps:
       - attach_workspace:
-          at: /tmp/pernonal-site
+          at: pernonal-site
       - run:
           name: ls
           command: ls
