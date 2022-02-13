@@ -107,10 +107,49 @@ jobs:
     steps:
       - attach_workspace:
           at: apps
-      - run:
-          name: ls
-          command: ls
 
+      - run:
+          name: Confirm that environment variables are set
+          command: |
+            if [ -z "$AWS_ACCESS_KEY_ID" ]; then
+              echo "No AWS_ACCESS_KEY_ID is set. Skipping build-and-push job ..."
+              circleci-agent step halt
+            fi
+      - aws-cli/setup:
+          profile-name: <<parameters.profile-name>>
+          aws-access-key-id: <<parameters.aws-access-key-id>>
+          aws-secret-access-key: <<parameters.aws-secret-access-key>>
+          aws-region: <<parameters.region>>
+
+      - run:
+          name: Log into Amazon ECR
+          command: |
+            aws ecr-public get-login-password --region $<<parameters.region>> --profile <<parameters.profile-name>> | docker login --username AWS --password-stdin $<<parameters.account-url>>
+      - setup_remote_docker:
+          version: 20.10.6
+          docker_layer_caching: false
+
+      - run:
+          name: Build docker image
+          command: |
+            registry_id=$(echo $<<parameters.account-url>> | sed "s;\..*;;g")
+            docker_tag_args=""
+            IFS="," read -ra DOCKER_TAGS \<<< "<< parameters.tag >>"
+            for tag in "${DOCKER_TAGS[@]}"; do
+              docker_tag_args="$docker_tag_args -t $<<parameters.account-url>>/<<parameters.repo>>:$tag"
+            done
+            docker build \
+              <<#parameters.extra-build-args>><<parameters.extra-build-args>><</parameters.extra-build-args>> \
+              -f <<parameters.path>>/<<parameters.dockerfile>> \
+              $docker_tag_args \
+              <<parameters.path>>
+      - run:
+          name: Push image to Amazon ECR
+          command: |
+            IFS="," read -ra DOCKER_TAGS \<<< "<< parameters.tag >>"
+            for tag in "${DOCKER_TAGS[@]}"; do
+              docker push $<<parameters.account-url>>/<<parameters.repo>>:${tag}
+            done
 
 workflows:
   build-and-deploy:
@@ -121,3 +160,4 @@ workflows:
             - build
           repo: "personal-site-backend"
           tag: "latest,${CIRCLE_SHA1:0:8}"
+          path: "apps/frontend"
