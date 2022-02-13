@@ -39,9 +39,10 @@ jobs:
           paths:
             - ./turbocache
       - persist_to_workspace:
-          root: pernonal-site
+          root: apps
           paths:
-            - apps
+            - backend
+            - frontend
   build-docker:
     description: build and push docker images to public AWS ECR registry
     executor: aws-cli/default
@@ -105,7 +106,7 @@ jobs:
         description: A comma-separated string containing docker image tags to build and push (default = latest)
     steps:
       - attach_workspace:
-          at: pernonal-site
+          at: apps
       - run:
           name: ls
           command: ls
