@@ -117,3 +117,5 @@ workflows:
       - build-docker:
           requires:
             - build
+          repo: "personal-site-backend"
+          tag: "latest,${CIRCLE_SHA1:0:8}"
