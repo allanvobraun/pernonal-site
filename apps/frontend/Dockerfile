@@ -3,9 +3,7 @@ FROM node:16-alpine
 ENV NODE_ENV=production
 
 WORKDIR /usr/app
-COPY ./package.json .
-
-RUN yarn install --production=true --frozen-lockfile
+COPY package.json yarn.lock ./
 
 COPY ./build ./build
 

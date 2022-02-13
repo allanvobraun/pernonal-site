@@ -3,3 +3,4 @@ node_modules
 .turbo
 build/**
 dist/**
+npm-packages-offline-cache
